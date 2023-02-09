@@ -1,4 +1,4 @@
-import prisma from "../config/database";
+import {prisma} from "@/config/database";
 import { GameInput } from "../services/games-service";
 
 async function getGames() {

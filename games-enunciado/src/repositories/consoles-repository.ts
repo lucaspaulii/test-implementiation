@@ -1,4 +1,4 @@
-import prisma from "../config/database";
+import {prisma} from "../config/database";
 import { ConsoleInput } from "../services/consoles-service";
 
 async function getConsoles() {

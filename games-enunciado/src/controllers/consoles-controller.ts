@@ -14,7 +14,6 @@ export async function getSpecificConsole(req: Request, res: Response) {
     const console = await consolesService.getSpecificConsole(id);
     res.send(console);
   } catch (error) {
-    console.log(error);
     res.sendStatus(httpStatus.NOT_FOUND);
   }
 }
@@ -25,7 +24,6 @@ export async function createConsole(req: Request, res: Response) {
     await consolesService.createConsole(consoleToCreate);
     res.sendStatus(httpStatus.CREATED);
   } catch (error) {
-    console.log(error);
     res.sendStatus(httpStatus.CONFLICT);
   }
 }

@@ -14,7 +14,6 @@ export async function getSpecificGame(req: Request, res: Response) {
     const game = await gamesService.getSpecificGame(id);
     res.send(game);
   } catch (error) {
-    console.log(error);
     res.sendStatus(httpStatus.NOT_FOUND);
   }
 }
@@ -25,7 +24,6 @@ export async function createGame(req: Request, res: Response) {
     await gamesService.createGame(game);
     res.sendStatus(httpStatus.CREATED);
   } catch (error) {
-    console.log(error);
     res.sendStatus(httpStatus.CONFLICT);
   }
 }
